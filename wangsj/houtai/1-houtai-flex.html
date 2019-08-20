@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伸缩盒后台布局</title>
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1328530_qapm0f51iwp.css">
+	<style>
+		html,body,.container {
+			height: 100%;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+		}
+		.top {
+			flex: 0 0 120px;
+			background-color: teal;
+			color:#fff; 
+		}
+		.top > .logo {
+			font-size: 26px;
+			line-height: 120px;
+			padding: 0 1em;
+		}
+		.content {
+			flex: 1 0 0;
+			display: flex;
+			overflow-y: auto;
+		}
+		.left {
+			flex-basis: 220px;
+			background-color: #ffffff;
+		}
+		.left > ul.left-nav {
+			text-align: center;
+		}
+		.left > ul.left-nav > li {
+			line-height: 3em;
+			border-bottom: 1px solid #cccccc;
+			
+		}
+		.left > ul.left-nav > li i.iconfont {
+			
+			left: 3em;
+		}
+		.left > ul.left-nav > li.current,
+		.left > ul.left-nav > li:hover {
+			background-color: #cccccc;
+			color: #1cb09a;
+		}
+		.left > ul.left-nav > li.current a,
+		.left > ul.left-nav > li:hover a {
+			color: #1cb09a;
+		}
+		.right {
+			flex: 1 0 0;
+			background-color: #ededed;
+			padding: 1em;
+		}
+		.wrapper {
+			height: 100%;
+			background-color: #ffffff;
+			overflow-y: auto;
+		}
+		table{
+			text-align: center;
+		}
+		.btn {
+			display: flex;
+			padding: .5em 1em;
+			border: 1px solid #ededed;
+			cursor: pointer;
+			border-radius: 3px;
+		}
+
+		.btn:hover {
+			box-shadow: 0 0 5px #ededed;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="top">
+			<div class="logo">
+				智慧校园 - 评教系统
+			</div>
+		</div>
+		<div class="content">
+			<div class="left">
+				<ul class="left-nav">
+					<li class="current">
+						<i class="iconfont icon-xuesheng"></i>
+						<a href="">学生管理</a>
+					</li>
+					<li>
+						<i class="iconfont icon-jiaoshiguanli"></i>
+						<a href="">教师管理</a>
+					</li>
+					<li>
+					<i class="iconfont icon-kecheng"></i><a href="">课程管理</a></li>
+					<li>
+					<i class="iconfont icon-pingjiao"></i><a href="">评教管理</a></li>
+					<li>
+					<i class="iconfont icon-wenjuanguanli"></i><a href="">问卷管理</a></li>
+				</ul>
+
+			</div>
+			<div class="right">
+				<div class="wrapper">
+					<!-- 按钮组 -->
+					<div class="btns">
+						<div class="btn">添加</div>
+						<div class="btn">批量删除</div>
+					</div>
+					<!-- 表格区域 -->
+					<table class="table">
+						<thead>
+							<tr>
+								<td>编号</td>
+								<td>姓名</td>
+								<td>性别</td>
+								<td>手机号</td>
+								<td>地址</td>
+								<td>操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							
+							<tr>
+								<td> <input type="checkbox"></td>
+								<td>张三</td>
+								<td>男</td>
+								<td>18876549991</td>
+								<td>兰州</td>
+								<td>
+									<i>删除</i>
+									<i>修改</i>
+								</td>
+							</tr>
+							<tr>
+								<td> <input type="checkbox"></td>
+								<td>李芳</td>
+								<td>女</td>
+								<td>17771771573</td>
+								<td>武汉</td>
+								<td>
+									<i>删除</i>
+									<i>修改</i>
+								</td>
+							</tr>
+							<tr>
+								<td> <input type="checkbox"></td>
+								<td>王五</td>
+								<td>男</td>
+								<td>15348697536</td>
+								<td>北京</td>
+								<td>
+									<i>删除</i>
+									<i>修改</i>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- 分页 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
